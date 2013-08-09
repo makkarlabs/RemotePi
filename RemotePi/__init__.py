@@ -1,6 +1,5 @@
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
-from flask.ext.mail import Mail, Message
 
 import logging
 import config
@@ -13,7 +12,6 @@ app.logger.addHandler(filehandler)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + config.DB_USERNAME + ':' + config.DB_PASSWORD + '@' + config.DB_SERVER + '/' + config.DB_NAME
 
 db = SQLAlchemy(app)
-mail = Mail(app)
 
 from RemotePi import views
 from RemotePi import models, forms

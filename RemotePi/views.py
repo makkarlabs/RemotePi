@@ -1,22 +1,17 @@
 #Flask Imports
-from flask import Flask, jsonify, flash, render_template, request, redirect, url_for, session, abort
-from flask.ext.security import login_required, current_user, login_user
+from flask import Flask, jsonify, flash, request, redirect, url_for, session, abort
 
 #App Imports
 from flask_app import app, forms, db
-from flask_app.models import User
+from flask_app.models import Role
 import config
 
 #Python Imports
-from datetime import datetime, date
-import calendar
 import json
-import time
 
 @app.route('/')
-@login_required
 def index():
-    return render_template('index.html')
+    return jsonify({"data":"yo"})
 
 #You can write 'function decorators' like @login_required as shown below
 #def subscription_required(fn):

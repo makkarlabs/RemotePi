@@ -1,6 +1,4 @@
 flask
-flask-security
 python-dateutil<2.0
 MySQL-python
-flask-bcrypt
 flask-sqlalchemy

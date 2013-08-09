@@ -5,16 +5,13 @@ import logging
 import config
 
 app = Flask(__name__)
-app.config.from_object('flask_app.config')
-filehandler = logging.FileHandler(filename=config.LOG_FILE_LOC)
-filehandler.setLevel(logging.INFO)
-app.logger.addHandler(filehandler)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + config.DB_USERNAME + ':' + config.DB_PASSWORD + '@' + config.DB_SERVER + '/' + config.DB_NAME
+app.config.from_object('RemotePi.config')
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://' + config.DB_USERNAME + ':' + config.DB_PASSWORD + '@' + config.DB_SERVER + '/' + config.DB_NAME
 
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 
 from RemotePi import views
-from RemotePi import models, forms
+#from RemotePi import models
 #import hedge_app.tasks
 
 #Uncomment on server

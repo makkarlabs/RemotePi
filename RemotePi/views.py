@@ -2,8 +2,8 @@
 from flask import Flask, jsonify, flash, request, redirect, url_for, session, abort
 
 #App Imports
-from flask_app import app, forms, db
-from flask_app.models import Role
+from RemotePi import app#, db
+#from RemotePi.models import Role
 import config
 
 #Python Imports
